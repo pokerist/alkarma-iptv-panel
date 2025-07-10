@@ -93,7 +93,7 @@ Follow these steps in order to properly deploy the system.
 ```bash
 # Clone the repository
 git clone https://github.com/pokerist/alkarma-iptv-panel.git
-
+cd alkarma-iptv-panel
 # Install dependencies
 cd server && npm install
 cd ../client && npm install
