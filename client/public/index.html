@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d6efd" />
+    <meta name="description" content="alkarma TV IPTV Admin Panel" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>alkarma TV - IPTV Admin Panel</title>
+    <style>
+      /* Create images right in the HTML */
+      #favicon-generator, #logo192-generator, #logo512-generator {
+        display: none;
+      }
+    </style>
+    <script>
+      // Generate favicon and logo files on page load
+      window.addEventListener('load', function() {
+        try {
+          // Generate favicon.ico
+          const faviconCanvas = document.getElementById('favicon-generator');
+          const faviconCtx = faviconCanvas.getContext('2d');
+          faviconCtx.fillStyle = '#0d6efd';
+          faviconCtx.fillRect(0, 0, 32, 32);
+          faviconCtx.fillStyle = 'white';
+          faviconCtx.font = 'bold 16px Arial';
+          faviconCtx.textAlign = 'center';
+          faviconCtx.textBaseline = 'middle';
+          faviconCtx.fillText('AK', 16, 16);
+          
+          // Generate logo192.png
+          const logo192Canvas = document.getElementById('logo192-generator');
+          const logo192Ctx = logo192Canvas.getContext('2d');
+          logo192Ctx.fillStyle = '#0d6efd';
+          logo192Ctx.fillRect(0, 0, 192, 192);
+          logo192Ctx.fillStyle = 'white';
+          logo192Ctx.font = 'bold 32px Arial';
+          logo192Ctx.textAlign = 'center';
+          logo192Ctx.textBaseline = 'middle';
+          logo192Ctx.fillText('AlKarma', 96, 80);
+          logo192Ctx.fillText('TV', 96, 120);
+          
+          // Generate logo512.png
+          const logo512Canvas = document.getElementById('logo512-generator');
+          const logo512Ctx = logo512Canvas.getContext('2d');
+          logo512Ctx.fillStyle = '#0d6efd';
+          logo512Ctx.fillRect(0, 0, 512, 512);
+          logo512Ctx.fillStyle = 'white';
+          logo512Ctx.font = 'bold 86px Arial';
+          logo512Ctx.textAlign = 'center';
+          logo512Ctx.textBaseline = 'middle';
+          logo512Ctx.fillText('AlKarma', 256, 220);
+          logo512Ctx.fillText('TV', 256, 320);
+          
+          console.log("Logo placeholders generated successfully!");
+        } catch (e) {
+          console.error("Error generating logos:", e);
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+    <!-- Canvas elements for logo generation -->
+    <canvas id="favicon-generator" width="32" height="32"></canvas>
+    <canvas id="logo192-generator" width="192" height="192"></canvas>
+    <canvas id="logo512-generator" width="512" height="512"></canvas>
+  </body>
+</html>
